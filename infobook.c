@@ -311,14 +311,14 @@ void password(void){
 	char ch,pass[20];
 	char w='*';
 	int i=0;
-	while(ch!=13){
+	while(ch!=13 && i < 20){
 		ch=getch();
 		if(ch!=13 && ch!=8){
 			printf("%c",w);
 			pass[i]=ch;
 			i++;
 		}
-			}
+    }
 	pass[i]='\0';
 	if(strcmp(pass,passwords)==0){
 		gotoxy(30,6);
